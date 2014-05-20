@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>yifat-questionnaire</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body class="fbbody">
+        <section id="content" class="fbcontentdivider">
+            <div id="startDiv">
+                <h1>welcome</h1>
+                <button id="startBtn">start test</button></div>
+            <div id="game" class="game">
+                <div id="questionArea"></div>
+                <div id="buttons">
+                    <button id="previous">previous</button>
+                    <button id="next">next</button>
+                </div>
+            </div>
+            <div id="quizResults" class="quizResults">
+               <div id="result"></div>
+                <button id="tryAgain">try again</button>
+            </div>
+        </section>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-2.1.0.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="question.json"></script>
+        <script src="js/vendor/mustache.js" type="text/javascript"></script>
+        <script id="questionTpl" type="text/template">
+            <fieldset class='quizArea'>
+                <h2>Question #{{num}}</h2>
+                <p>{{text}}</p>
+                <ul>
+                    {{#options}}
+                    <li>
+                        <input type=radio name=question{{num}} value={{code}}{{#isSelected}} checked {{/isSelected}} />{{text}}
+                    <li/>
+                    {{/options}}
+                </ul>
+            </fieldset>
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

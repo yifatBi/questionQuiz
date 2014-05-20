@@ -1,0 +1,35 @@
+var jsonObject = {
+  "questions": [
+    {
+      "text": "How much 3+1?",
+      "options": [
+          {"code":"1", "text":"1"},
+          {"code":"2","text":"4"},
+          {"code":"3","text":"3"}
+      ],
+        "correctAnswers":["2"]
+    },
+      {
+          "text": "How much 3+2?",
+          "options": [
+              {"code":"1","text":"5"},
+              {"code":"2","text":"1"},
+              {"code":"3","text":"2"},
+              {"code":"4","text":"3"},
+              {"code":"6","text":"6"}
+          ],
+          "correctAnswers":["1"]
+      },
+      {
+          "text": "which countries in Israel?",
+          "options": [
+              {"code":"1", "text":"Jerusalem"},
+              {"code":"2","text":"Jafo"},
+              {"code":"3","text":"Tel-Avia"},
+              {"code":"4","text":"Monako"},
+              {"code":"5","text":"Berlin"}
+          ],
+          "correctAnswers":["1","2","3"]
+      }
+  ]
+}

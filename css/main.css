@@ -1,0 +1,104 @@
+/* Default Facebook CSS */
+.fbbody
+{
+    font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    color: #333333;
+}
+#buttons{
+    position: relative;
+}
+
+.game,
+.quizResults,
+#previuos
+{
+    display: none;
+}
+#game{
+  position: relative;
+}
+#previuos{
+    float: left;
+}
+#next{
+    float: right;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#content{
+    width: 50%;
+    height: 400px;
+    margin : auto;
+    margin-top : 2%;
+    padding: 2% 8% 8% 8%;
+    max-height: 500px;
+    background-color: #ffffff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    }
+body{
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffe714), to(#f72d0b));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(#ffe714, #f72d0b);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(#ffe714, #f72d0b);
+
+    /* IE 10 */
+    background: -ms-linear-gradient(#ffe714, #f72d0b);
+    background: linear-gradient(#ffe714, #f72d0b);
+    background-attachment: fixed;
+}
+button{
+    color: white;
+    width: 120px;
+    background: #7EA1EC;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+     border-radius: 3%;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+
+h1,
+h2,h3{
+  color: #3b5998;
+}
+input[type='radio'], label{
+    vertical-align: baseline;
+    padding: 10px;
+    margin: 10px;
+}
+/* Facebook Box Styles */
+.fbgreybox
+{
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    color: #333333;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.fberrorbox
+{
+    background-color: #ffebe8;
+    border: 1px solid #dd3c10;
+    color: #333333;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* Content Divider on White Background */
+.fbcontentdivider
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 520px;
+    height: 1px;
+    background-color: #d8dfea;
+}
