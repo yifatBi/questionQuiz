@@ -103,11 +103,10 @@ $(document).ready(function() {
                 }
                 return false;
             }},
+        //Build the question view with mustache template and underscore
         render : function () {
             var templateQuestion = $questionTpl.html();
-            $.each(quiz.questionArray[quiz.currQuestion],function(pKey,pVal){
-                quiz.question[pKey] = pVal;
-            })
+            _.extend(quiz.question,quiz.questionArray[quiz.currQuestion]);
             quiz.question.num = (quiz.currQuestion + 1);
             var html = Mustache.to_html(templateQuestion, quiz.question);
             $questionArea.html(html);
@@ -120,14 +119,14 @@ $(document).ready(function() {
                 $next.attr("disabled", false).removeClass(_disableClass);
             }
 
-            //Check if radio button was selected end enable the next button
-            $('input:radio').on('change',function(event){
+            //When first radio button selected enable next button
+            $('ul').one('change',function(event){
                 $next.attr("disabled", false).removeClass(_disableClass);
             });
         },
         //Save user selected answer to user answer array
         saveUserAnswer : function(){
-            var selected = $('input[type=radio]:checked:visible');
+            var selected = $('input[type=radio]:checked');
             //Add the selected value to the answers array
             quiz.userAnswers[quiz.currQuestion] = selected.attr('value');
         },
